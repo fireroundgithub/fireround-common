@@ -1,4 +1,4 @@
-package fireround.common;
+package cn.fireround.common;
 
 import java.util.Collection;
 import java.util.List;
