@@ -1,4 +1,4 @@
-package fireround.common;
+package cn.fireround.common;
 
 public class StringUtils {
     
