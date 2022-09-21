@@ -7,8 +7,62 @@
     <groupId>cn.fireround</groupId>
     <artifactId>fireround-common</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <description>common util</description>
+    <url>https://github.com/fireroundgithub/fireround-common</url>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/fireroundgithub/fireround-common.git</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>fireround</id>
+            <name>wencheng</name>
+            <email>charlesdeemail@foxmail.com</email>
+        </developer>
+    </developers>
 
     <dependencies>
-        
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>repository</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.7</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
